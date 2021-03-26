@@ -17,6 +17,25 @@
     $(".colse-btn").click(function(){
       $(".myvideo").fadeOut("slow");
     });
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('header').addClass("sticky")
+        }else{
+            $('header').removeClass("sticky")
+        }
+        if(this.scrollY > 500){
+            $('.scroll-up-btn').addClass("show")
+        }else{
+            $('.scroll-up-btn').removeClass("show")
+        }
+    });
+    $(".menubar").click(function(){
+      $(".menu").toggle(1000);
+    });
+        // Scroll Slide Up
+    $('.scroll-up-btn').click(function(){
+        $('html').animate({scrollTop: 0});
+    });
   });
   // Counter
   (function ($) {
